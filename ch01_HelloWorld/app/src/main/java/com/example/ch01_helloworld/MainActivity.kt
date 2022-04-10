@@ -47,5 +47,13 @@ class MainActivity : AppCompatActivity() {
         if (name == "Cormoran") {
             println("$name Strike");
         }
+
+        x = 1;
+        println("$TAG Before the loop. x = $x.");
+        while(x < 4) {
+            println("$TAG In the loop. x = $x.");
+            x = x + 1;
+        }
+        println("$TAG After the loop. x = $x.");
     }
 }
