@@ -6,7 +6,7 @@ import android.view.View
 
 class MainActivity : AppCompatActivity() {
 
-    private var TAG = "!!!!";
+    private val TAG = "!!!!";
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -15,8 +15,37 @@ class MainActivity : AppCompatActivity() {
 
     fun press_button(view: View) {
 
-        var app = App();
+        val message = App().getMessage();
 
-        System.out.println(TAG + "App: " + app.getMessage());
+        println("$TAG App: $message");
+
+
+        var x = 3;
+        val name = "Cormoran";
+
+        x *= 10;
+        println("$TAG Do something: X is $x.");
+
+        x = 30;
+        while(x > 20) {
+            x -= 1;
+            println("$TAG x is now $x");
+        }
+
+        x = 0;
+        for(i in 1..10) {
+            x += 1;
+            println("$TAG x is now $x");
+        }
+
+        if (x == 20) {
+            println("$TAG x must be 20.");
+        } else {
+            println("$TAG x isn't 20.");
+        }
+
+        if (name == "Cormoran") {
+            println("$name Strike");
+        }
     }
 }
