@@ -55,5 +55,10 @@ class MainActivity : AppCompatActivity() {
             x = x + 1;
         }
         println("$TAG After the loop. x = $x.");
+
+        x = 3;
+        var y = 1;
+
+        println(if (x > y ) "$TAG $x is greater than $y." else "$TAG $x isn't greater than $y.");
     }
 }
